@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		391514452873952A00849839 /* InstapicsumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391514442873952A00849839 /* InstapicsumApp.swift */; };
-		391514472873952A00849839 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391514462873952A00849839 /* ContentView.swift */; };
 		391514492873952B00849839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 391514482873952B00849839 /* Assets.xcassets */; };
 		3915144D2873952B00849839 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3915144C2873952B00849839 /* Preview Assets.xcassets */; };
 		391514612873952B00849839 /* InstapicsumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391514602873952B00849839 /* InstapicsumUITests.swift */; };
@@ -24,6 +23,8 @@
 		39A8ED9E2873BB0500DD725B /* StaticProviderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8ED9B2873BB0500DD725B /* StaticProviderError.swift */; };
 		39A8ED9F2873BB0500DD725B /* StaticImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8ED9C2873BB0500DD725B /* StaticImageProvider.swift */; };
 		39A8EDA12873BF9A00DD725B /* StaticImageProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A8EDA02873BF9A00DD725B /* StaticImageProviderTests.swift */; };
+		39C528BC2873C133005AAD46 /* PhotographTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C528BA2873C133005AAD46 /* PhotographTileView.swift */; };
+		39C528BD2873C133005AAD46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C528BB2873C133005AAD46 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +47,6 @@
 /* Begin PBXFileReference section */
 		391514412873952A00849839 /* Instapicsum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instapicsum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		391514442873952A00849839 /* InstapicsumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstapicsumApp.swift; sourceTree = "<group>"; };
-		391514462873952A00849839 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		391514482873952B00849839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3915144A2873952B00849839 /* Instapicsum.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instapicsum.entitlements; sourceTree = "<group>"; };
 		3915144C2873952B00849839 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -65,6 +65,8 @@
 		39A8ED9B2873BB0500DD725B /* StaticProviderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticProviderError.swift; sourceTree = "<group>"; };
 		39A8ED9C2873BB0500DD725B /* StaticImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaticImageProvider.swift; sourceTree = "<group>"; };
 		39A8EDA02873BF9A00DD725B /* StaticImageProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticImageProviderTests.swift; sourceTree = "<group>"; };
+		39C528BA2873C133005AAD46 /* PhotographTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotographTileView.swift; sourceTree = "<group>"; };
+		39C528BB2873C133005AAD46 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,9 +118,9 @@
 		391514432873952A00849839 /* Instapicsum */ = {
 			isa = PBXGroup;
 			children = (
+				39C528B92873C108005AAD46 /* View */,
 				3915147128739B8E00849839 /* Model */,
 				391514442873952A00849839 /* InstapicsumApp.swift */,
-				391514462873952A00849839 /* ContentView.swift */,
 				391514482873952B00849839 /* Assets.xcassets */,
 				3915144A2873952B00849839 /* Instapicsum.entitlements */,
 				3915144B2873952B00849839 /* Preview Content */,
@@ -181,6 +183,15 @@
 				39A8ED9B2873BB0500DD725B /* StaticProviderError.swift */,
 			);
 			path = StaticProvider;
+			sourceTree = "<group>";
+		};
+		39C528B92873C108005AAD46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				39C528BB2873C133005AAD46 /* ContentView.swift */,
+				39C528BA2873C133005AAD46 /* PhotographTileView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,10 +326,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				39A8ED9F2873BB0500DD725B /* StaticImageProvider.swift in Sources */,
+				39C528BD2873C133005AAD46 /* ContentView.swift in Sources */,
 				3915147728739CA100849839 /* ImageProvider.swift in Sources */,
 				39A8ED952873BAAB00DD725B /* PhotographStore.swift in Sources */,
-				391514472873952A00849839 /* ContentView.swift in Sources */,
 				39A8ED9E2873BB0500DD725B /* StaticProviderError.swift in Sources */,
+				39C528BC2873C133005AAD46 /* PhotographTileView.swift in Sources */,
 				39A8ED962873BAAB00DD725B /* ImageStore.swift in Sources */,
 				391514452873952A00849839 /* InstapicsumApp.swift in Sources */,
 				39A8ED9D2873BB0500DD725B /* StaticPhotographCollectionProvider.swift in Sources */,
