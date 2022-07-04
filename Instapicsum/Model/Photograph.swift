@@ -9,7 +9,8 @@ import Foundation
 
 typealias PhotographID = String
 
-struct Photograph: Identifiable {
+/// Represents the metadata for an photographic image
+struct Photograph: Identifiable, Decodable {
     enum Orientation {
         case landscape
         case portrait
@@ -22,6 +23,16 @@ struct Photograph: Identifiable {
     let url: URL
     let downloadURL: URL
 
+    enum CodingKeys: String, CodingKey {
+        case id
+        case author
+        case width
+        case height
+        case url
+        case downloadURL = "download_url"
+    }
+
+    /// Photograph Orientation
     var orientation: Orientation {
         width > height ? .landscape : .portrait
     }
