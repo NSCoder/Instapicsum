@@ -12,7 +12,11 @@ final class PhotographStore: PhotographCollectionProvider, ObservableObject {
     let photographProvider: any PhotographCollectionProvider
 
     init(photographProvider: PhotographCollectionProvider = StaticPhotographCollectionProvider()) {
-        self.photographProvider = photographProvider
+        if ProcessInfo.processInfo.arguments.contains("XCTest") {
+            self.photographProvider = StaticPhotographCollectionProvider()
+        } else {
+            self.photographProvider = photographProvider
+        }
     }
 
     func photographs(for pageNumber: PageNumber) async throws -> [Photograph] {

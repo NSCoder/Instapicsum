@@ -26,9 +26,10 @@ struct PhotographCollectionView: View {
         ScrollView {
             LazyVGrid(columns: [.init(), .init(), .init()]) {
                 ForEach($photographs) { $photograph in
-                    PhotographTileView(photograph: $photograph)
-                        .frame(width: 100, height: 100)
-
+                    NavigationLink(destination: PhotographView(photograph: $photograph)) {
+                        PhotographTileView(photograph: $photograph)
+                            .frame(width: 100, height: 100)
+                    }
                 }
                 ProgressView()
                     .frame(width: 100, height: 100)

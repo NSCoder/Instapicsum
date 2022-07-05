@@ -12,7 +12,11 @@ final class ImageStore: ImageProvider, ObservableObject {
     let imageProvider: any ImageProvider
 
     init(imageProvider: ImageProvider = StaticImageProvider()) {
-        self.imageProvider = imageProvider
+        if ProcessInfo.processInfo.arguments.contains("XCTest") {
+            self.imageProvider = StaticImageProvider()
+        } else {
+            self.imageProvider = imageProvider
+        }
     }
 
     func thumbnailImage(for photograph: Photograph) async throws -> UIImage {
