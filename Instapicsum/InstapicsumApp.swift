@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct InstapicsumApp: App {
+    let photographStore = PhotographStore()
+    let imageStore = ImageStore()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                PhotographCollectionView()
+            }
+            .environmentObject(photographStore)
+            .environmentObject(imageStore)
         }
     }
 }
