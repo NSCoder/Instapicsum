@@ -11,7 +11,7 @@ import SwiftUI
 final class ImageStore: ImageProvider, ObservableObject {
     let imageProvider: any ImageProvider
 
-    init(imageProvider: ImageProvider = StaticImageProvider()) {
+    init(imageProvider: ImageProvider = PicsumImageProvider()) {
         if ProcessInfo.processInfo.arguments.contains("XCTest") {
             self.imageProvider = StaticImageProvider()
         } else {

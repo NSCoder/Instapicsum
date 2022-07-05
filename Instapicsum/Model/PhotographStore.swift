@@ -11,7 +11,7 @@ import SwiftUI
 final class PhotographStore: PhotographCollectionProvider, ObservableObject {
     let photographProvider: any PhotographCollectionProvider
 
-    init(photographProvider: PhotographCollectionProvider = StaticPhotographCollectionProvider()) {
+    init(photographProvider: PhotographCollectionProvider = PicsumPhotographCollectionProvider()) {
         if ProcessInfo.processInfo.arguments.contains("XCTest") {
             self.photographProvider = StaticPhotographCollectionProvider()
         } else {
